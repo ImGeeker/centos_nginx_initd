@@ -17,11 +17,11 @@
 
 # Check that networking is up.
 [ "$NETWORKING" = "no" ] && exit 0
-
-nginx="/opt/nginx/sbin/nginx"
+prefix = "/usr/local/webserver"
+nginx="$prefix/nginx/sbin/nginx"
 prog=$(basename $nginx)
 
-NGINX_CONF_FILE="/opt/nginx/conf/nginx.conf"
+NGINX_CONF_FILE="$prefix/nginx/conf/nginx.conf"
 
 lockfile=/var/lock/subsys/nginx
 
